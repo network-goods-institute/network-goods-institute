@@ -39,7 +39,7 @@ export default function Home() {
           </p>
         </section>
       </div>
-      <main className="flex flex-col border-t-2 border-muted bg-gradient-to-b from-muted to-[200px] gap-20 py-24">
+      <main className="flex items-center flex-col border-t-2 border-muted bg-gradient-to-b from-muted to-[200px] gap-20 py-24">
         <Section id="about" title="About"></Section>
         <Section id="team" title="Team">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-16">

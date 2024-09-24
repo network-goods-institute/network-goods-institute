@@ -11,8 +11,11 @@ export const Section: React.FC<SectionProps> = ({
   ...props
 }) => {
   return (
-    <section className={cn("p-16 w-full min-h-screen", className)} {...props}>
-      <h2 className="font-bold text-3xl text-muted-foreground mb-24  after:left-0 after:-z-10 after:block after:h-1 after:w-full  after:shadow-sm">
+    <section
+      className={cn("p-16 w-full max-w-6xl min-h-screen", className)}
+      {...props}
+    >
+      <h2 className="font-bold text-3xl text-muted-foreground mb-24 after:flex after:h-1  after:shadow-sm">
         {title}
       </h2>
       {children}
