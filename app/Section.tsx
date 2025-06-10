@@ -12,12 +12,15 @@ export const Section: React.FC<SectionProps> = ({
 }) => {
   return (
     <section
-      className={cn("p-16 w-full max-w-6xl min-h-screen", className)}
+      className={cn("w-full max-w-7xl mx-auto px-8", className)}
       {...props}
     >
-      <h2 className="font-bold text-3xl text-muted-foreground mb-24 after:flex after:h-1  after:shadow-sm">
-        {title}
-      </h2>
+      <div className="text-center mb-16">
+        <h2 className="text-5xl font-bold text-gray-900 mb-4">
+          {title}
+        </h2>
+        <div className="w-24 h-1 bg-gradient-to-r from-gray-400 to-gray-600 mx-auto rounded-full"></div>
+      </div>
       {children}
     </section>
   );

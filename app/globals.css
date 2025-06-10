@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-inter: 'Inter', sans-serif;
+  --font-lora: 'Lora', serif;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -16,12 +18,40 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.content--canvas {
+  display: grid;
+  grid-template-rows: 100px 1fr 20px;
+  align-items: center;
+  justify-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  padding-bottom: 0;
+  gap: 6rem;
+  font-family: var(--font-inter);
+  position: relative;
+}
+
+.section {
+  padding: 4rem;
+  width: 100%;
+  max-width: 96rem;
+  min-height: 100vh;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, var(--primary), var(--secondary));
   }
 }
 
@@ -53,6 +83,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   /* .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -85,8 +116,9 @@ body {
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-background text-foreground font-inter;
+    @apply text-foreground font-inter;
   }
 
   html {
