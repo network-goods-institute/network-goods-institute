@@ -76,7 +76,7 @@ export default function Home() {
                 <div>
                   <h4 className="text-lg font-semibold mb-3 text-purple-300">For Collective Intelligence</h4>
                   <p className="text-gray-300 leading-relaxed">
-                    We build systems that reason about "what would have happened otherwise" to improve judgment and resource allocation.
+                    We build systems that reason about &quot;what would have happened otherwise&quot; to improve judgment and resource allocation.
                   </p>
                 </div>
               </div>
