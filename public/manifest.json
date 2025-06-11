@@ -1,0 +1,32 @@
+{
+  "name": "Network Goods Institute",
+  "short_name": "NGI",
+  "description": "Network Goods Institute builds coordination mechanisms for collective intelligence and externality pricing using counterfactual reasoning, economic incentives, and epistemic values.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["research", "technology", "finance", "education"],
+  "lang": "en-US",
+  "dir": "ltr"
+} 
