@@ -16,6 +16,13 @@ export default function Home() {
         <nav className="row-start-1 flex gap-8 flex-wrap items-center justify-center bg-white/80 backdrop-blur-sm px-8 py-4 rounded-full border border-gray-200 shadow-lg" role="navigation" aria-label="Main navigation">
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
+            href="#mars-governance"
+            aria-label="Navigate to Mars Governance section"
+          >
+            Our Ambitious Mission
+          </a>
+          <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
             href="#our-approach"
             aria-label="Navigate to Our Approach section"
           >
@@ -26,7 +33,7 @@ export default function Home() {
             href="#affiliations"
             aria-label="Navigate to Affiliations section"
           >
-            Affiliations
+            Friends
           </a>
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
@@ -75,32 +82,89 @@ export default function Home() {
         </div>
       </div>
       <main className="flex items-center flex-col border-t border-gray-200 bg-gradient-to-b from-gray-50 to-white gap-32 py-32">
+        <Section id="mars-governance" title="Our Ambitious Mission">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="flex justify-center mb-16">
+              <Image
+                src="/mars.jpg"
+                alt="Mars planet surface"
+                width={512}
+                height={384}
+                className="rounded-2xl shadow-2xl"
+                priority
+              />
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <article className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-white font-bold">EP</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Externality Pricing</h3>
+              </article>
+              
+              <article className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-white font-bold">CR</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Counterfactual Reasoning</h3>
+              </article>
+              
+              <article className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-white font-bold">PR</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Power Regulation</h3>
+              </article>
+            </div>
+          </div>
+        </Section>
+
         <Section id="our-approach" title="Our Approach">
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">The problems as we see them</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               <article className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6" aria-hidden="true">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
                   <span className="text-white font-bold text-xl">EP</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Externality Pricing</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed mb-4">
                   How can we properly account for the costs and benefits of actions that affect others?
                 </p>
+                <div className="text-blue-600 font-medium">Solution: Index Wallets</div>
               </article>
+              
               <article className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6" aria-hidden="true">
-                  <span className="text-white font-bold text-xl">CI</span>
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                  <span className="text-white font-bold text-xl">CR</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Collective Intelligence</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  How can we make better group decisions at scale?
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Counterfactual Reasoning</h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  How can we understand "what would have happened otherwise" to make better decisions?
                 </p>
+                <div className="text-purple-600 font-medium">Solution: Collective Intelligence</div>
+              </article>
+              
+              <article className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
+                  <span className="text-white font-bold text-xl">PR</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Power Regulation</h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  How can we prevent concentration and abuse of power in governance systems?
+                </p>
+                <div className="text-orange-600 font-medium space-y-2">
+                  <div>We're inspired by <a href="https://wtfisqf.com/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">quadratic funding</a> and <a href="https://www.gitcoin.co/blog/leveling-the-field-how-connection-oriented-cluster-matching-strengthens-quadratic-funding" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">connection-oriented cluster matching</a>.</div>
+                  <div><a href="#contact" className="text-green-600 font-bold underline hover:no-underline bg-green-50 px-2 py-1 rounded">Help us solve it</a></div>
+                </div>
               </article>
             </div>
 
             <article className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">Our Method: Counterfactual Reasoning</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <h3 className="text-2xl font-bold mb-6">Our Methods</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                   <h4 className="text-lg font-semibold mb-3 text-blue-300">For Externality Pricing</h4>
                   <p className="text-gray-300 leading-relaxed">
@@ -108,9 +172,15 @@ export default function Home() {
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-3 text-purple-300">For Collective Intelligence</h4>
+                  <h4 className="text-lg font-semibold mb-3 text-purple-300">For Counterfactual Reasoning</h4>
                   <p className="text-gray-300 leading-relaxed">
-                    We build systems that reason about &quot;what would have happened otherwise&quot; to improve judgment and resource allocation.
+                    We build collective intelligence systems through platforms like Negation Game that enable reasoned disagreement and self-validating behavior.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold mb-3 text-orange-300">For Power Regulation</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    We're exploring mechanisms inspired by quadratic funding and connection-oriented approaches. We need your help to solve this challenge.
                   </p>
                 </div>
               </div>
@@ -118,7 +188,7 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section id="affiliations" title="Affiliations">
+        <Section id="affiliations" title="Friends">
           <div className="max-w-5xl mx-auto">
             <div className="flex justify-center items-center gap-16 flex-wrap" role="list">
               <div className="flex flex-col gap-4 items-center p-8 rounded-2xl bg-white shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" role="listitem">
