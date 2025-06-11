@@ -1,114 +1,263 @@
 import { Section } from "@/app/Section";
+import { FAQ } from "@/app/components/FAQ";
+import { Contact } from "@/app/components/Contact";
 import Image from "next/image";
 import Script from "next/script";
-import coda from "./coda.svg";
-import connor from "./connor.jpeg";
-import farcaster from "./farcaster.svg";
-import volky from "./volky.png";
-import xIcon from "./x.svg";
+import scrollLogo from "../public/scroll.png";
+import deltaLogo from "../public/delta.png";
 
 export default function Home() {
+  const showProspectiveAffiliations = false;
+
   return (
     <>
       <Script src="/bg.js" strategy="afterInteractive" />
-      <div className="content--canvas grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-0 gap-16 sm:p-20 font-inter">
-        <header className="row-start-1 flex gap-6 flex-wrap items-center justify-center">
+      <div className="content--canvas">
+        <nav className="row-start-1 flex gap-8 flex-wrap items-center justify-center bg-white/80 backdrop-blur-sm px-8 py-4 rounded-full border border-gray-200 shadow-lg" role="navigation" aria-label="Main navigation">
           <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="#about"
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
+            href="#our-approach"
+            aria-label="Navigate to Our Approach section"
           >
-            About
+            Our Approach
           </a>
           <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="#team"
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
+            href="#affiliations"
+            aria-label="Navigate to Affiliations section"
           >
-            Team
+            Affiliations
           </a>
           <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
             href="#projects"
+            aria-label="Navigate to Projects section"
           >
             Projects
           </a>
-        </header>
-        <section className="flex flex-col gap-2 row-start-2">
-          <h1 className="text-6xl font-bold">Network Goods Institute</h1>
-          <p className="text-2xl tracking-tight text-muted-foreground">
+          <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
+            href="#faq"
+            aria-label="Navigate to FAQ section"
+          >
+            FAQ
+          </a>
+          <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
+            href="#contact"
+            aria-label="Navigate to Contact section"
+          >
+            Contact
+          </a>
+        </nav>
+        <header className="flex flex-col gap-6 row-start-2 text-center max-w-4xl mx-auto">
+          <h1 className="text-7xl font-bold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-600 bg-clip-text text-transparent leading-tight">
+            Network Goods Institute
+          </h1>
+          <p className="text-3xl tracking-tight text-gray-600 font-light">
             New paradigms for coordination
           </p>
-        </section>
-      </div>
-      <main className="flex items-center flex-col border-t-2 border-muted bg-gradient-to-b from-muted to-[200px] gap-20 py-24">
-        <Section id="about" title="About"></Section>
-        <Section id="team" title="Team">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-16">
-            <div className="flex flex-col gap-2 items-center p-6 rounded-lg">
-              <Image
-                className="rounded-full border-4"
-                src={connor}
-                width={200}
-                alt="Connor"
-              />
-              <p className="font-bold text-3xl text-center">Connor McCormick</p>
+        </header>
 
-              <div className="flex gap-2">
-                <a href="https://x.com/connormcmk" target="_blank">
-                  <Image
-                    src={xIcon.src}
-                    width={24}
-                    height={24}
-                    alt="X profile"
-                  />
-                </a>
-                <a href="https://warpcast.com/nor" target="_blank">
-                  <Image
-                    src={farcaster.src}
-                    width={24}
-                    height={24}
-                    alt="Farcaster profile"
-                  />
-                </a>
-                <a href="https://coda.io/@connor" target="_blank">
-                  <Image src={coda.src} width={24} height={24} alt="Coda" />
-                </a>
-              </div>
+        <div className="row-start-3 flex flex-col items-center gap-4">
+          <p className="text-gray-500 text-sm">Scroll to explore</p>
+          <div className="animate-bounce">
+            <svg
+              className="w-8 h-8 text-gray-400 animate-pulse"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7-7-7" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <main className="flex items-center flex-col border-t border-gray-200 bg-gradient-to-b from-gray-50 to-white gap-32 py-32">
+        <Section id="our-approach" title="Our Approach">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+              <article className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6" aria-hidden="true">
+                  <span className="text-white font-bold text-xl">EP</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Externality Pricing</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  How can we properly account for the costs and benefits of actions that affect others?
+                </p>
+              </article>
+              <article className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6" aria-hidden="true">
+                  <span className="text-white font-bold text-xl">CI</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Collective Intelligence</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  How can we make better group decisions at scale?
+                </p>
+              </article>
             </div>
-            <div className="flex flex-col gap-2 items-center p-6 rounded-lg">
-              <Image
-                className="rounded-full border-4"
-                src={volky}
-                width={200}
-                alt="Volky"
-              />
-              <p className="font-bold text-3xl text-center">Volky</p>
-              <div className="flex gap-2">
-                <a href="https://x.com/volkyeth" target="_blank">
-                  <Image
-                    src={xIcon.src}
-                    width={24}
-                    height={24}
-                    alt="X profile"
-                  />
-                </a>
-                <a href="https://warpcast.com/volky.eth" target="_blank">
-                  <Image
-                    src={farcaster.src}
-                    width={24}
-                    height={24}
-                    alt="Farcaster profile"
-                  />
-                </a>
+
+            <article className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-white">
+              <h3 className="text-2xl font-bold mb-6">Our Method: Counterfactual Reasoning</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-lg font-semibold mb-3 text-blue-300">For Externality Pricing</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    We use values-embedded vector money, a new way to encode social values directly into financial instruments.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold mb-3 text-purple-300">For Collective Intelligence</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    We build systems that reason about &quot;what would have happened otherwise&quot; to improve judgment and resource allocation.
+                  </p>
+                </div>
               </div>
+            </article>
+          </div>
+        </Section>
+
+        <Section id="affiliations" title="Affiliations">
+          <div className="max-w-5xl mx-auto">
+            <div className="flex justify-center items-center gap-16 flex-wrap" role="list">
+              <div className="flex flex-col gap-4 items-center p-8 rounded-2xl bg-white shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" role="listitem">
+                <Image
+                  src={scrollLogo}
+                  alt="Scroll - Layer 2 Ethereum scaling solution"
+                  width={128}
+                  height={128}
+                  className="rounded-2xl shadow-lg"
+                  priority
+                />
+                <p className="font-bold text-2xl text-center text-gray-900">Scroll</p>
+              </div>
+              <div className="flex flex-col gap-4 items-center p-8 rounded-2xl bg-white shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" role="listitem">
+                <Image
+                  src={deltaLogo}
+                  alt="Delta - Decentralized trading protocol"
+                  width={128}
+                  height={128}
+                  className="rounded-2xl shadow-lg"
+                  priority
+                />
+                <p className="font-bold text-2xl text-center text-gray-900">Delta</p>
+              </div>
+              {showProspectiveAffiliations && [
+                { name: "Protocol Labs", color: "from-red-400 to-red-500", description: "Decentralized web protocols" },
+                { name: "Metaculus", color: "from-indigo-400 to-indigo-500", description: "Prediction and forecasting platform" },
+                { name: "Uniswap", color: "from-pink-400 to-pink-500", description: "Decentralized exchange protocol" },
+              ].map((affiliation, index) => (
+                <div key={index} className="flex flex-col gap-4 items-center p-8 rounded-2xl bg-white shadow-lg border border-gray-100 opacity-50" role="listitem">
+                  <div className={`w-32 h-32 bg-gradient-to-br ${affiliation.color} rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg`} aria-label={`${affiliation.name} logo placeholder`}>
+                    {affiliation.name.split(' ').map(word => word[0]).join('')}
+                  </div>
+                  <p className="font-bold text-2xl text-center text-gray-900">{affiliation.name}</p>
+                </div>
+              ))}
             </div>
           </div>
         </Section>
+
         <Section id="projects" title="Projects">
-          <div className="grid grid-cols-1 sm:grid-cols-2  gap-16">
-            <h3 className="font-bold text-3xl text-center">Negation Game</h3>
-            <h3 className="font-bold text-3xl text-center">Index wallets</h3>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12" role="list">
+              <article className="bg-white rounded-3xl p-10 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300" role="listitem">
+                <header className="flex items-center gap-4 mb-6">
+                  <Image
+                    src="/negationgame.jpg"
+                    alt="Negation Game logo"
+                    width={64}
+                    height={64}
+                    className="rounded-2xl shadow-lg"
+                    priority
+                  />
+                  <h3 className="font-bold text-3xl text-gray-900">Negation Game</h3>
+                </header>
+                <p className="text-xl text-gray-600 mb-6 leading-relaxed">
+                  A protocol layer for reasoned disagreement: powered by economic incentives, governed by epistemic values, and designed for minds willing to change.
+                </p>
+                <div className="space-y-4 text-gray-700">
+                  <p className="leading-relaxed">
+                    A discussion platform built on principles of epistemic accountability and honest intellectual discourse. Unlike traditional platforms, it implements economic incentives that reward intellectual honesty and evidence-based reasoning.
+                  </p>
+                  <div className="flex gap-4 flex-wrap" role="list" aria-label="Project tags">
+                    <span className="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium" role="listitem">Epistemic Values</span>
+                    <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium" role="listitem">Economic Incentives</span>
+                    <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium" role="listitem">Truth-Seeking</span>
+                  </div>
+                </div>
+                <a
+                  href="https://paragraph.com/@ngi/info-market-overton"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-xl hover:from-indigo-600 hover:to-purple-700 transition-all duration-200 font-medium"
+                  aria-label="Learn more about Negation Game project"
+                >
+                  Learn More →
+                </a>
+                <a
+                  href="https://play.negationgame.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-6 ml-4 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-600 text-white rounded-xl hover:from-blue-600 hover:to-cyan-700 transition-all duration-200 font-medium"
+                  aria-label="Try out Negation Game"
+                >
+                  Try it out →
+                </a>
+              </article>
+
+              <article className="bg-white rounded-3xl p-10 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300" role="listitem">
+                <header className="flex items-center gap-4 mb-6">
+                  <Image
+                    src="/index_logo.svg"
+                    alt="Index Wallet logo"
+                    width={64}
+                    height={64}
+                    className="rounded-2xl shadow-lg bg-white p-2"
+                    priority
+                  />
+                  <h3 className="font-bold text-3xl text-gray-900">Index Wallet</h3>
+                </header>
+                <p className="text-xl text-gray-600 mb-6 leading-relaxed">
+                  Voluntary taxation, wealth equalization, and funding for public goods.
+                </p>
+                <div className="space-y-4 text-gray-700">
+                  <p className="leading-relaxed">
+                    A programmable wallet that enables voluntary taxation through economic mechanisms. Index wallets create wealth-equalizing dynamics while funding public goods through selfish taxation principles.
+                  </p>
+                  <div className="flex gap-4 flex-wrap" role="list" aria-label="Project tags">
+                    <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium" role="listitem">Public Goods</span>
+                    <span className="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm font-medium" role="listitem">Wealth Equality</span>
+                    <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium" role="listitem">Economic Mechanism</span>
+                  </div>
+                </div>
+                <a
+                  href="https://preprint.indexwallets.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-xl hover:from-emerald-600 hover:to-teal-700 transition-all duration-200 font-medium"
+                  aria-label="Read Index Wallet preprint research paper"
+                >
+                  Read Preprint →
+                </a>
+                <a
+                  href="https://www.indexwallets.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-6 ml-4 px-6 py-3 bg-gradient-to-r from-yellow-500 to-orange-600 text-white rounded-xl hover:from-yellow-600 hover:to-orange-700 transition-all duration-200 font-medium"
+                  aria-label="View Index Wallet demo"
+                >
+                  View Demo →
+                </a>
+              </article>
+            </div>
           </div>
         </Section>
+
+        <FAQ />
+
+        <Contact />
       </main>
     </>
   );
