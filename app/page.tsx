@@ -142,7 +142,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Counterfactual Reasoning</h3>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  How can we understand "what would have happened otherwise" to make better decisions?
+                  How can we understand &quot;what would have happened otherwise&quot; to make better decisions?
                 </p>
                 <div className="text-purple-600 font-medium">Solution: Collective Intelligence</div>
               </article>
@@ -156,7 +156,7 @@ export default function Home() {
                   How can we prevent concentration and abuse of power in governance systems?
                 </p>
                 <div className="text-orange-600 font-medium space-y-2">
-                  <div>We're inspired by <a href="https://wtfisqf.com/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">quadratic funding</a> and <a href="https://www.gitcoin.co/blog/leveling-the-field-how-connection-oriented-cluster-matching-strengthens-quadratic-funding" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">connection-oriented cluster matching</a>.</div>
+                  <div>We&apos;re inspired by <a href="https://wtfisqf.com/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">quadratic funding</a> and <a href="https://www.gitcoin.co/blog/leveling-the-field-how-connection-oriented-cluster-matching-strengthens-quadratic-funding" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">connection-oriented cluster matching</a>.</div>
                   <div><a href="#contact" className="text-green-600 font-bold underline hover:no-underline bg-green-50 px-2 py-1 rounded">Help us solve it</a></div>
                 </div>
               </article>
@@ -180,7 +180,7 @@ export default function Home() {
                 <div>
                   <h4 className="text-lg font-semibold mb-3 text-orange-300">For Power Regulation</h4>
                   <p className="text-gray-300 leading-relaxed">
-                    We're exploring mechanisms inspired by quadratic funding and connection-oriented approaches. We need your help to solve this challenge.
+                    We&apos;re exploring mechanisms inspired by quadratic funding and connection-oriented approaches. We need your help to solve this challenge.
                   </p>
                 </div>
               </div>
