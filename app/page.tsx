@@ -84,46 +84,21 @@ export default function Home() {
       <main className="flex items-center flex-col border-t border-gray-200 bg-gradient-to-b from-gray-50 to-white gap-32 py-32">
         <Section id="mars-governance" title="Our Ambitious Mission">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-16">
-              <Image
-                src="/mars.jpg"
-                alt="Mars planet surface"
-                width={512}
-                height={384}
-                className="rounded-2xl shadow-2xl"
-                priority
-              />
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <article className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                  <span className="text-white font-bold">EP</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Externality Pricing</h3>
-              </article>
-              
-              <article className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                  <span className="text-white font-bold">CR</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Counterfactual Reasoning</h3>
-              </article>
-              
-              <article className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                  <span className="text-white font-bold">PR</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Power Regulation</h3>
-              </article>
-            </div>
+            <Image
+              src="/mars.jpg"
+              alt="Mars planet surface"
+              width={1280}
+              height={960}
+              className="rounded-2xl shadow-2xl"
+              priority
+            />
           </div>
         </Section>
 
         <Section id="our-approach" title="Our Approach">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">The problems as we see them</h3>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               <article className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
@@ -135,7 +110,7 @@ export default function Home() {
                 </p>
                 <div className="text-blue-600 font-medium">Solution: Index Wallets</div>
               </article>
-              
+
               <article className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
                   <span className="text-white font-bold text-xl">CR</span>
@@ -146,7 +121,7 @@ export default function Home() {
                 </p>
                 <div className="text-purple-600 font-medium">Solution: Collective Intelligence</div>
               </article>
-              
+
               <article className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
                   <span className="text-white font-bold text-xl">PR</span>
@@ -242,7 +217,7 @@ export default function Home() {
                     className="rounded-2xl shadow-lg"
                     priority
                   />
-                  <h3 className="font-bold text-3xl text-gray-900">Negation Game</h3>
+                  <h3 className="font-bold text-3xl text-gray-900">The Negation Game</h3>
                 </header>
                 <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                   A protocol layer for reasoned disagreement: powered by economic incentives, governed by epistemic values, and designed for minds willing to change.
@@ -287,7 +262,7 @@ export default function Home() {
                     className="rounded-2xl shadow-lg bg-white p-2"
                     priority
                   />
-                  <h3 className="font-bold text-3xl text-gray-900">Index Wallet</h3>
+                  <h3 className="font-bold text-3xl text-gray-900">Index Wallets</h3>
                 </header>
                 <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                   Voluntary taxation, wealth equalization, and funding for public goods.

@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 export interface SectionProps extends React.HTMLAttributes<HTMLDivElement> {
-  title: string;
+  title?: string;
 }
 
 export const Section: React.FC<SectionProps> = ({
