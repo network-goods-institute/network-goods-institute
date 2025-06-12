@@ -13,44 +13,44 @@ export default function Home() {
     <>
       <Script src="/bg.js" strategy="afterInteractive" />
       <div className="content--canvas">
-        <nav className="row-start-1 flex gap-8 flex-wrap items-center justify-center bg-white/80 backdrop-blur-sm px-8 py-4 rounded-full border border-gray-200 shadow-lg" role="navigation" aria-label="Main navigation">
+        <nav className="row-start-1 flex flex-wrap justify-center items-center gap-4 md:gap-8 bg-white/80 backdrop-blur-sm px-4 py-3 md:px-8 md:py-4 rounded-full border border-gray-200 shadow-lg" role="navigation" aria-label="Main navigation">
           <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
+            className="flex items-center gap-2 text-sm md:text-base hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
             href="#mars-governance"
             aria-label="Navigate to Mars Governance section"
           >
             Our Ambitious Mission
           </a>
           <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
+            className="flex items-center gap-2 text-sm md:text-base hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
             href="#our-approach"
             aria-label="Navigate to Our Approach section"
           >
             Our Approach
           </a>
           <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
+            className="flex items-center gap-2 text-sm md:text-base hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
             href="#affiliations"
             aria-label="Navigate to Affiliations section"
           >
             Friends
           </a>
           <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
+            className="flex items-center gap-2 text-sm md:text-base hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
             href="#projects"
             aria-label="Navigate to Projects section"
           >
             Projects
           </a>
           <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
+            className="flex items-center gap-2 text-sm md:text-base hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
             href="#faq"
             aria-label="Navigate to FAQ section"
           >
             FAQ
           </a>
           <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
+            className="flex items-center gap-2 text-sm md:text-base hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
             href="#contact"
             aria-label="Navigate to Contact section"
           >
@@ -131,7 +131,6 @@ export default function Home() {
                   How can we prevent concentration and abuse of power in governance systems?
                 </p>
                 <div className="text-orange-600 font-medium space-y-2">
-                  <div>We&apos;re inspired by <a href="https://wtfisqf.com/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">quadratic funding</a> and <a href="https://www.gitcoin.co/blog/leveling-the-field-how-connection-oriented-cluster-matching-strengthens-quadratic-funding" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">connection-oriented cluster matching</a>.</div>
                   <div><a href="#contact" className="text-green-600 font-bold underline hover:no-underline bg-green-50 px-2 py-1 rounded">Help us solve it</a></div>
                 </div>
               </article>
@@ -149,13 +148,16 @@ export default function Home() {
                 <div>
                   <h4 className="text-lg font-semibold mb-3 text-purple-300">For Counterfactual Reasoning</h4>
                   <p className="text-gray-300 leading-relaxed">
-                    We build collective intelligence systems through platforms like Negation Game that enable reasoned disagreement and self-validating behavior.
+                    We build collective intelligence systems through platforms like Negation Game that enable reasoned disagreement and self-invalidating behavior.
                   </p>
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-3 text-orange-300">For Power Regulation</h4>
                   <p className="text-gray-300 leading-relaxed">
                     We&apos;re exploring mechanisms inspired by quadratic funding and connection-oriented approaches. We need your help to solve this challenge.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    We&apos;re inspired by <a href="https://wtfisqf.com/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">quadratic funding</a> and <a href="https://www.gitcoin.co/blog/leveling-the-field-how-connection-oriented-cluster-matching-strengthens-quadratic-funding" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">connection-oriented cluster matching</a>.
                   </p>
                 </div>
               </div>
