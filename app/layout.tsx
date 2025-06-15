@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "mars governance",
     "space governance",
     "externality pricing",
-    "counterfactual reasoning", 
+    "counterfactual reasoning",
     "power regulation",
     "index wallets",
     "negation game",
@@ -99,9 +99,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
+  // verification: {
+  //   google: "your-google-verification-code",
+  // },
 };
 
 const jsonLd = {
@@ -116,7 +116,7 @@ const jsonLd = {
   email: "connor@networkgoods.institute",
   knowsAbout: [
     "Mars Governance",
-    "Space Governance", 
+    "Space Governance",
     "Externality Pricing",
     "Counterfactual Reasoning",
     "Power Regulation",
