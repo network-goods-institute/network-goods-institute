@@ -106,7 +106,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Externality Pricing</h3>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  How can we properly account for the costs and benefits of actions that affect others?
+                  How can we make it profitable for companies to fund and create public goods?
                 </p>
                 <div className="text-blue-600 font-medium">Solution: Index Wallets</div>
               </article>
@@ -130,9 +130,6 @@ export default function Home() {
                 <p className="text-gray-600 leading-relaxed mb-4">
                   How can we prevent concentration and abuse of power in governance systems?
                 </p>
-                <div className="text-orange-600 font-medium space-y-2">
-                  <div><a href="#contact" className="text-green-600 font-bold underline hover:no-underline bg-green-50 px-2 py-1 rounded">Help us solve it</a></div>
-                </div>
               </article>
             </div>
 
@@ -154,11 +151,11 @@ export default function Home() {
                 <div>
                   <h4 className="text-lg font-semibold mb-3 text-orange-300">For Power Regulation</h4>
                   <p className="text-gray-300 leading-relaxed">
-                    We&apos;re exploring mechanisms inspired by quadratic funding and connection-oriented approaches. We need your help to solve this challenge.
+                    We&apos;re inspired by mechanisms such as <a href="https://wtfisqf.com/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">quadratic funding</a> and <a href="https://www.gitcoin.co/blog/leveling-the-field-how-connection-oriented-cluster-matching-strengthens-quadratic-funding" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">connection-oriented cluster matching</a>.
                   </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    We&apos;re inspired by <a href="https://wtfisqf.com/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">quadratic funding</a> and <a href="https://www.gitcoin.co/blog/leveling-the-field-how-connection-oriented-cluster-matching-strengthens-quadratic-funding" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">connection-oriented cluster matching</a>.
-                  </p>
+                  <div className="mt-4">
+                    <a href="#contact" className="text-white font-bold bg-green-700 px-4 py-2 rounded-xl hover:bg-green-600 transition-colors">Help us solve it</a>
+                  </div>
                 </div>
               </div>
             </article>
