@@ -16,13 +16,6 @@ export default function Home() {
         <nav className="row-start-1 flex flex-wrap justify-center items-center gap-4 md:gap-8 bg-white/80 backdrop-blur-sm px-4 py-3 md:px-8 md:py-4 rounded-full border border-gray-200 shadow-lg" role="navigation" aria-label="Main navigation">
           <a
             className="flex items-center gap-2 text-sm md:text-base hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
-            href="#mars-governance"
-            aria-label="Navigate to Mars Governance section"
-          >
-            Our Ambitious Mission
-          </a>
-          <a
-            className="flex items-center gap-2 text-sm md:text-base hover:underline hover:underline-offset-4 text-gray-700 hover:text-gray-900 transition-colors font-medium"
             href="#our-approach"
             aria-label="Navigate to Our Approach section"
           >
@@ -82,18 +75,6 @@ export default function Home() {
         </div>
       </div>
       <main className="flex items-center flex-col border-t border-gray-200 bg-gradient-to-b from-gray-50 to-white gap-32 py-32">
-        <Section id="mars-governance" title="Our Ambitious Mission">
-          <div className="max-w-4xl mx-auto text-center">
-            <Image
-              src="/mars.jpg"
-              alt="Mars planet surface"
-              width={1280}
-              height={960}
-              className="rounded-2xl shadow-2xl"
-              priority
-            />
-          </div>
-        </Section>
 
         <Section id="our-approach" title="Our Approach">
           <div className="max-w-4xl mx-auto">
