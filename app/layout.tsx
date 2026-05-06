@@ -15,44 +15,32 @@ const lora = Lora({
   display: "swap",
 });
 
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
-
 export const metadata: Metadata = {
   title: {
-    default: "Network Goods Institute - Building Governance for Mars",
+    default: "Network Goods Institute — New paradigms for coordination",
     template: "%s | Network Goods Institute"
   },
-  description: "Network Goods Institute is building the obvious choice of governance for Mars by solving externality pricing, counterfactual reasoning, and power regulation through Index Wallets and Negation Game.",
+  description:
+    "Network Goods Institute designs economic, epistemic, and computational mechanisms for groups to reason and decide together at scale. We build values-embedded money, collective-intelligence platforms, and deliberative civic memory.",
   keywords: [
-    "mars governance",
-    "space governance",
+    "coordination mechanisms",
+    "mechanism design",
+    "collective intelligence",
+    "public goods funding",
     "externality pricing",
-    "counterfactual reasoning",
-    "power regulation",
+    "epistemic incentives",
+    "deliberation",
+    "civic technology",
     "index wallets",
     "negation game",
-    "collective intelligence",
+    "litmus",
+    "louie",
     "quadratic funding",
     "connection-oriented cluster matching",
-    "network goods",
-    "coordination mechanisms",
-    "economic incentives",
-    "epistemic values",
-    "public goods funding",
-    "mechanism design",
-    "protocol design",
+    "values-embedded money",
+    "epistemic infrastructure",
+    "institutional memory",
     "decentralized governance",
-    "blockchain",
-    "crypto economics"
   ],
   authors: [{ name: "Network Goods Institute" }],
   creator: "Network Goods Institute",
@@ -67,26 +55,28 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Network Goods Institute - Building Governance for Mars",
-    description: "Building the obvious choice of governance for Mars by solving externality pricing, counterfactual reasoning, and power regulation through Index Wallets and Negation Game.",
+    title: "Network Goods Institute — New paradigms for coordination",
+    description:
+      "Economic, epistemic, and computational mechanisms for groups to reason and decide together at scale — values-embedded money, collective-intelligence platforms, and deliberative civic memory.",
     url: "https://networkgoods.institute",
     siteName: "Network Goods Institute",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/mars.jpg",
-        width: 512,
-        height: 384,
-        alt: "Network Goods Institute - Building Governance for Mars",
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Network Goods Institute",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Network Goods Institute - Building Governance for Mars",
-    description: "Building the obvious choice of governance for Mars by solving externality pricing, counterfactual reasoning, and power regulation through Index Wallets and Negation Game.",
-    images: ["/mars.jpg"],
+    title: "Network Goods Institute — New paradigms for coordination",
+    description:
+      "Economic, epistemic, and computational mechanisms for groups to reason and decide together at scale.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -99,41 +89,42 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  // verification: {
-  //   google: "your-google-verification-code",
-  // },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Network Goods Institute",
-  description: "Network Goods Institute is building the obvious choice of governance for Mars by solving externality pricing, counterfactual reasoning, and power regulation through Index Wallets and Negation Game.",
+  description:
+    "Network Goods Institute designs economic, epistemic, and computational mechanisms for groups to reason and decide together at scale.",
   url: "https://networkgoods.institute",
   logo: "https://networkgoods.institute/favicon.ico",
   foundingDate: "2024",
   areaServed: "Worldwide",
   email: "connor@networkgoods.institute",
   knowsAbout: [
-    "Mars Governance",
-    "Space Governance",
+    "Coordination Mechanisms",
+    "Mechanism Design",
+    "Collective Intelligence",
+    "Public Goods Funding",
     "Externality Pricing",
-    "Counterfactual Reasoning",
-    "Power Regulation",
+    "Epistemic Incentives",
+    "Deliberation",
+    "Civic Technology",
     "Index Wallets",
     "Negation Game",
-    "Collective Intelligence",
+    "Litmus",
+    "Louie",
     "Quadratic Funding",
     "Connection-Oriented Cluster Matching",
-    "Coordination Mechanisms",
-    "Economic Incentives",
-    "Epistemic Values",
-    "Public Goods Funding",
-    "Mechanism Design"
+    "Values-Embedded Money",
+    "Epistemic Infrastructure",
+    "Institutional Memory"
   ],
   sameAs: [
     "https://play.negationgame.com/",
-    "https://www.indexwallets.org/"
+    "https://www.indexwallets.org/",
+    "https://litmus.bio/"
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -141,15 +132,31 @@ const jsonLd = {
     itemListElement: [
       {
         "@type": "ResearchProject",
+        name: "Index Wallets",
+        description:
+          "Programmable wallets for values-embedded vector currencies — a market mechanism for funding public goods.",
+        url: "https://preprint.indexwallets.org/"
+      },
+      {
+        "@type": "ResearchProject",
         name: "Negation Game",
-        description: "A protocol layer for reasoned disagreement: powered by economic incentives, governed by epistemic values, and designed for minds willing to change.",
+        description:
+          "A protocol layer for reasoned disagreement: economic incentives, epistemic values, and minds willing to change.",
         url: "https://paragraph.com/@ngi/info-market-overton"
       },
       {
         "@type": "ResearchProject",
-        name: "Index Wallet",
-        description: "Voluntary taxation, wealth equalization, and funding for public goods.",
-        url: "https://preprint.indexwallets.org/"
+        name: "Litmus",
+        description:
+          "AI-powered, expert-augmented forecasting for FDA drug approvals — calibrated, transparent, and auditable.",
+        url: "https://litmus.bio/"
+      },
+      {
+        "@type": "ResearchProject",
+        name: "Louie",
+        description:
+          "Civic deliberative memory: making the public record of municipal government searchable, sourced, and answerable to the public.",
+        url: "https://mississauga-demo.pages.dev/#/louie"
       }
     ]
   }
@@ -168,12 +175,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <link rel="canonical" href="https://networkgoods.institute" />
-        <meta name="theme-color" content="#6366f1" />
+        <meta name="theme-color" content="#1d5559" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
       </head>
       <body className={`${inter.variable} ${lora.variable} antialiased`}>
-
         {children}
       </body>
     </html>

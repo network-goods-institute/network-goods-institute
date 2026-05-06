@@ -10,27 +10,27 @@ interface FAQItem {
 const faqData: FAQItem[] = [
     {
         question: "What is the Network Goods Institute?",
-        answer: "The Network Goods Institute is a research organization focused on building coordination mechanisms for collective intelligence and externality pricing using counterfactual reasoning, economic incentives, and epistemic values."
+        answer: "NGI is a research organization building coordination mechanisms — protocols, incentives, and governance systems that help groups reason and decide together. We work at the intersection of mechanism design, collective intelligence, and economic infrastructure."
     },
     {
         question: "What are coordination mechanisms?",
-        answer: "Coordination mechanisms are systems designed to help groups make better decisions collectively. They include protocols, incentive structures, and governance systems that align individual actions with collective goals."
+        answer: "Systems that help groups make better decisions collectively. Markets are coordination mechanisms; so are courts, peer review, and elections. We design new ones for problems the existing ones don't solve well."
     },
     {
-        question: "How does counterfactual reasoning work?",
-        answer: "Counterfactual reasoning involves thinking about 'what would have happened otherwise' - analyzing alternative scenarios to better understand causation and make more informed decisions about resource allocation and policy."
+        question: "What do you mean by epistemic incentives?",
+        answer: "Public reasoning today rewards conviction over calibration and narrative dominance over accuracy. Our work — the Negation Game, Litmus, Louie — builds infrastructure where being right and being willing to change your mind both pay off, and where the reasoning behind a decision can be surfaced, contested, and recorded."
     },
     {
         question: "What is the Negation Game?",
-        answer: "The Negation Game is a protocol layer for reasoned disagreement that uses economic incentives and epistemic values to reward intellectual honesty and evidence-based reasoning in discussions."
+        answer: "A protocol for reasoned disagreement. Participants stake credibility on claims, and the system rewards those willing to update in light of stronger arguments. It's designed to make intellectual honesty economically rational."
     },
     {
         question: "How do Index Wallets work?",
-        answer: "Index Wallets are programmable wallets that enable voluntary taxation through economic mechanisms, creating wealth-equalizing dynamics while funding public goods through selfish taxation principles."
+        answer: "Index Wallets are programmable wallets that let people and institutions accept payment in values-embedded vector currencies. The result is a market mechanism for funding public goods — voluntary taxation that benefits the payer."
     },
     {
-        question: "Who can use these coordination mechanisms?",
-        answer: "Our coordination mechanisms are designed for organizations, communities, and individuals interested in improving group decision-making, funding public goods, or implementing more effective governance systems."
+        question: "Who can use these mechanisms?",
+        answer: "Researchers, civic institutions, funders, protocol teams, and communities trying to coordinate at scale. If you're working on a problem where collective reasoning or public-goods funding is the bottleneck, we'd like to hear from you."
     }
 ];
 
@@ -42,62 +42,72 @@ export function FAQ() {
     };
 
     return (
-        <section id="faq" className="w-full max-w-4xl mx-auto px-8" itemScope itemType="https://schema.org/FAQPage">
-            <div className="text-center mb-16">
-                <h2 className="text-5xl font-bold text-gray-900 mb-4">
-                    Frequently Asked Questions
+        <section
+            id="faq"
+            className="w-full max-w-3xl mx-auto px-6 md:px-10"
+            itemScope
+            itemType="https://schema.org/FAQPage"
+        >
+            <header className="mb-12 md:mb-16">
+                <div className="text-xs uppercase tracking-[0.18em] text-ink-muted mb-4">
+                    Questions
+                </div>
+                <h2 className="font-display text-4xl md:text-5xl text-ink leading-tight">
+                    Frequently asked
                 </h2>
-                <div className="w-24 h-1 bg-gradient-to-r from-gray-400 to-gray-600 mx-auto rounded-full"></div>
-            </div>
+            </header>
 
-            <div className="space-y-4">
-                {faqData.map((faq, index) => (
-                    <div
-                        key={index}
-                        className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden"
-                        itemScope
-                        itemProp="mainEntity"
-                        itemType="https://schema.org/Question"
-                    >
-                        <button
-                            className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
-                            onClick={() => toggleFAQ(index)}
-                            aria-expanded={openIndex === index}
-                            aria-controls={`faq-answer-${index}`}
+            <div className="border-t border-rule">
+                {faqData.map((faq, index) => {
+                    const isOpen = openIndex === index;
+                    return (
+                        <div
+                            key={index}
+                            className="border-b border-rule"
+                            itemScope
+                            itemProp="mainEntity"
+                            itemType="https://schema.org/Question"
                         >
-                            <h3 className="text-xl font-semibold text-gray-900" itemProp="name">
-                                {faq.question}
-                            </h3>
-                            <div className={`transform transition-transform duration-200 ${openIndex === index ? 'rotate-180' : ''}`}>
-                                <svg
-                                    className="w-6 h-6 text-gray-600"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
+                            <button
+                                className="w-full py-6 text-left flex justify-between items-baseline gap-6 group"
+                                onClick={() => toggleFAQ(index)}
+                                aria-expanded={isOpen}
+                                aria-controls={`faq-answer-${index}`}
+                            >
+                                <h3
+                                    className="font-display text-xl md:text-2xl text-ink leading-snug group-hover:text-accent transition-colors"
+                                    itemProp="name"
+                                >
+                                    {faq.question}
+                                </h3>
+                                <span
+                                    className={`shrink-0 text-ink-muted text-2xl leading-none transition-transform duration-200 ${isOpen ? "rotate-45" : ""}`}
                                     aria-hidden="true"
                                 >
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        </button>
+                                    +
+                                </span>
+                            </button>
 
-                        <div
-                            id={`faq-answer-${index}`}
-                            className={`overflow-hidden transition-all duration-300 ${openIndex === index ? 'max-h-96 pb-6' : 'max-h-0'
-                                }`}
-                            itemScope
-                            itemProp="acceptedAnswer"
-                            itemType="https://schema.org/Answer"
-                        >
-                            <div className="px-8">
-                                <p className="text-gray-700 leading-relaxed" itemProp="text">
-                                    {faq.answer}
-                                </p>
+                            <div
+                                id={`faq-answer-${index}`}
+                                className={`grid transition-all duration-300 ${isOpen ? "grid-rows-[1fr] opacity-100 pb-6" : "grid-rows-[0fr] opacity-0"}`}
+                                itemScope
+                                itemProp="acceptedAnswer"
+                                itemType="https://schema.org/Answer"
+                            >
+                                <div className="overflow-hidden">
+                                    <p
+                                        className="text-ink-soft leading-relaxed text-base md:text-lg max-w-2xl"
+                                        itemProp="text"
+                                    >
+                                        {faq.answer}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    );
+                })}
             </div>
         </section>
     );
-} 
+}
