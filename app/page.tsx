@@ -8,6 +8,7 @@ import scrollLogo from "../public/scroll.png";
 import deltaLogo from "../public/delta.png";
 
 type Project = {
+  slug: string;
   name: string;
   tagline: string;
   body: string;
@@ -19,6 +20,7 @@ type Project = {
 
 const projects: Project[] = [
   {
+    slug: "index-wallets",
     name: "Index Wallets",
     tagline: "Voluntary taxation, wealth equalization, funding for public goods.",
     body: "A programmable wallet that accepts payment in values-embedded vector currencies. The result is a market mechanism for funding public goods — one in which paying voluntary taxes is in the payer's own interest. We've published a preprint setting out the formal model, and a working demo.",
@@ -31,6 +33,7 @@ const projects: Project[] = [
     image: { src: "/index_logo.svg", alt: "Index Wallets" },
   },
   {
+    slug: "negation-game",
     name: "The Negation Game",
     tagline: "A protocol layer for reasoned disagreement.",
     body: "A discussion platform that pairs economic incentives with epistemic values. Participants stake credibility on claims; the system rewards those willing to update in light of stronger arguments. It is designed for groups that need to reason together honestly — and for minds willing to change.",
@@ -43,6 +46,7 @@ const projects: Project[] = [
     image: { src: "/negationgame.jpg", alt: "Negation Game" },
   },
   {
+    slug: "litmus",
     name: "Litmus",
     tagline: "AI-powered prediction for FDA drug approvals.",
     body: "Litmus combines AI research tools, a curated expert network, and a structured forecast elicitation workflow to produce calibrated predictions on biotech outcomes. It is built around a core question in collective-intelligence research: how do you systematically extract what humans know that AI doesn't, through a process that is rigorous, reproducible, and fully transparent? Developed in collaboration with Elanor Davies, with support from NGI.",
@@ -51,6 +55,7 @@ const projects: Project[] = [
     links: [{ label: "litmus.bio", href: "https://litmus.bio/" }],
   },
   {
+    slug: "louie",
     name: "Louie",
     tagline: "Civic deliberative memory.",
     body: "Louie turns the public record of municipal government into something residents and officials can actually use. It ingests transcripts, agendas, and minutes, and makes them searchable in plain language — every answer linked back to the exact moment in the original meeting. Underneath sits a structured argument map: who said what, what was debated, what was decided, and what was left open. A demo of the first deployment is live with transcripts from the City of Mississauga in Ontario, with active outreach to other municipalities ahead of the October 2026 elections.",
@@ -155,9 +160,15 @@ export default function Home() {
               <p className="text-ink-soft leading-relaxed">
                 Markets don&rsquo;t price what they don&rsquo;t see. Public goods stay underfunded; harms stay externalized. The opportunity is to make funding them profitable.
               </p>
-              <div className="text-sm text-ink-soft border-l border-rule pl-4 leading-relaxed">
-                <span className="block text-xs uppercase tracking-[0.18em] text-ink-muted mb-1">Comparable market</span>
-                Global payments industry revenue ~$2.4T/yr; Visa + Mastercard combined market cap ~$1.1T.
+              <div className="text-sm text-ink-soft border-l border-rule pl-4 leading-relaxed space-y-3">
+                <div>
+                  <span className="block text-xs uppercase tracking-[0.18em] text-ink-muted mb-1">Our approach</span>
+                  <a href="#project-index-wallets" className="accent-link font-medium">Index Wallets ↓</a>
+                </div>
+                <div>
+                  <span className="block text-xs uppercase tracking-[0.18em] text-ink-muted mb-1">Comparable market</span>
+                  Global payments industry revenue ~$2.4T/yr; Visa + Mastercard combined market cap ~$1.1T.
+                </div>
               </div>
               <Disclosure label="Examples in the news">
                 <ul className="text-sm text-ink-soft space-y-3 leading-relaxed pt-1">
@@ -184,9 +195,19 @@ export default function Home() {
               <p className="text-ink-soft leading-relaxed">
                 Public reasoning rewards conviction over calibration and narrative dominance over accuracy. Better incentives — for being right, and for changing your mind — would reshape how decisions get made.
               </p>
-              <div className="text-sm text-ink-soft border-l border-rule pl-4 leading-relaxed">
-                <span className="block text-xs uppercase tracking-[0.18em] text-ink-muted mb-1">Comparable market</span>
-                Prediction-market platforms ~$3B combined valuation (Polymarket, Kalshi); expert networks $1.5B+ revenue; financial data terminals $30B+ revenue; US municipal IT spend $50B+/yr.
+              <div className="text-sm text-ink-soft border-l border-rule pl-4 leading-relaxed space-y-3">
+                <div>
+                  <span className="block text-xs uppercase tracking-[0.18em] text-ink-muted mb-1">Our approach</span>
+                  <span className="font-medium">
+                    <a href="#project-negation-game" className="accent-link">Negation Game ↓</a>,{" "}
+                    <a href="#project-litmus" className="accent-link">Litmus ↓</a>,{" "}
+                    <a href="#project-louie" className="accent-link">Louie ↓</a>
+                  </span>
+                </div>
+                <div>
+                  <span className="block text-xs uppercase tracking-[0.18em] text-ink-muted mb-1">Comparable market</span>
+                  Prediction-market platforms ~$3B combined valuation (Polymarket, Kalshi); expert networks $1.5B+ revenue; financial data terminals $30B+ revenue; US municipal IT spend $50B+/yr.
+                </div>
               </div>
               <Disclosure label="Examples in the news">
                 <ul className="text-sm text-ink-soft space-y-3 leading-relaxed pt-1">
@@ -213,9 +234,15 @@ export default function Home() {
               <p className="text-ink-soft leading-relaxed">
                 Coordination systems concentrate power as easily as they distribute it. Designing against capture is part of the work, not an afterthought.
               </p>
-              <div className="text-sm text-ink-soft border-l border-rule pl-4 leading-relaxed">
-                <span className="block text-xs uppercase tracking-[0.18em] text-ink-muted mb-1">Comparable market</span>
-                Hard to size cleanly: the firms targeted by antitrust and platform-governance fights have $10T+ in combined market cap; AI compute and capability concentration is the next front.
+              <div className="text-sm text-ink-soft border-l border-rule pl-4 leading-relaxed space-y-3">
+                <div>
+                  <span className="block text-xs uppercase tracking-[0.18em] text-ink-muted mb-1">Our approach</span>
+                  <span className="text-ink">No dedicated project here yet — designing against capture is built into the work below.</span>
+                </div>
+                <div>
+                  <span className="block text-xs uppercase tracking-[0.18em] text-ink-muted mb-1">Comparable market</span>
+                  Hard to size cleanly: the firms targeted by antitrust and platform-governance fights have $10T+ in combined market cap; AI compute and capability concentration is the next front.
+                </div>
               </div>
               <Disclosure label="Examples in the news">
                 <ul className="text-sm text-ink-soft space-y-3 leading-relaxed pt-1">
@@ -269,7 +296,8 @@ export default function Home() {
             {projects.map((project, idx) => (
               <article
                 key={project.name}
-                className={`grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 py-10 md:py-14 ${idx === 0 ? "border-t" : ""} border-b border-rule`}
+                id={`project-${project.slug}`}
+                className={`grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 py-10 md:py-14 scroll-mt-24 ${idx === 0 ? "border-t" : ""} border-b border-rule`}
               >
                 <div className="md:col-span-3 flex flex-col gap-4">
                   <div className="text-xs uppercase tracking-[0.18em] text-ink-muted">
