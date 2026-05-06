@@ -23,7 +23,7 @@ const projects: Project[] = [
     tagline: "Voluntary taxation, wealth equalization, funding for public goods.",
     body: "A programmable wallet that accepts payment in values-embedded vector currencies. The result is a market mechanism for funding public goods — one in which paying voluntary taxes is in the payer's own interest. We've published a preprint setting out the formal model, and a working demo.",
     problem: "Externality pricing",
-    marketSize: "Payment rails — Visa & Mastercard process $30T+/yr; Stripe ~$1T+.",
+    marketSize: "Global payments industry revenue ~$2.4T/yr; Visa + Mastercard combined market cap ~$1.1T.",
     links: [
       { label: "Read the preprint", href: "https://preprint.indexwallets.org/" },
       { label: "Try the demo", href: "https://www.indexwallets.org/" },
@@ -35,10 +35,10 @@ const projects: Project[] = [
     tagline: "A protocol layer for reasoned disagreement.",
     body: "A discussion platform that pairs economic incentives with epistemic values. Participants stake credibility on claims; the system rewards those willing to update in light of stronger arguments. It is designed for groups that need to reason together honestly — and for minds willing to change.",
     problem: "Epistemic incentives",
-    marketSize: "Prediction markets — Polymarket + Kalshi crossed $10B+ in 2024 volume, growing fast.",
+    marketSize: "Prediction-market platforms ~$3B combined valuation (Polymarket, Kalshi); broader online-discourse market is hundreds of billions annually.",
     links: [
       { label: "Read the essay", href: "https://paragraph.com/@ngi/info-market-overton" },
-      { label: "Play", href: "https://play.negationgame.com/" },
+      { label: "negationgame.com", href: "https://negationgame.com/" },
     ],
     image: { src: "/negationgame.jpg", alt: "Negation Game" },
   },
@@ -47,7 +47,7 @@ const projects: Project[] = [
     tagline: "AI-powered prediction for FDA drug approvals.",
     body: "Litmus combines AI research tools, a curated expert network, and a structured forecast elicitation workflow to produce calibrated predictions on biotech outcomes. It is built around a core question in collective-intelligence research: how do you systematically extract what humans know that AI doesn't, through a process that is rigorous, reproducible, and fully transparent? Developed in collaboration with Elanor Davies, with support from NGI.",
     problem: "Epistemic incentives",
-    marketSize: "Expert networks ($1.5B+) and financial data terminals ($30B+).",
+    marketSize: "Expert networks $1.5B+ annual revenue; financial data terminals (Bloomberg ~$13B/yr) sit in the $30B+ category.",
     links: [{ label: "litmus.bio", href: "https://litmus.bio/" }],
   },
   {
@@ -55,7 +55,7 @@ const projects: Project[] = [
     tagline: "Civic deliberative memory.",
     body: "Louie turns the public record of municipal government into something residents and officials can actually use. It ingests transcripts, agendas, and minutes, and makes them searchable in plain language — every answer linked back to the exact moment in the original meeting. Underneath sits a structured argument map: who said what, what was debated, what was decided, and what was left open. A demo of the first deployment is live with transcripts from the City of Mississauga in Ontario, with active outreach to other municipalities ahead of the October 2026 elections.",
     problem: "Epistemic incentives",
-    marketSize: "Civic & govtech — $50B+ in US municipal IT alone.",
+    marketSize: "US municipal IT spend ~$50B/yr; Tyler Technologies (incumbent) ~$25B market cap.",
     links: [{ label: "View the demo", href: "https://mississauga-demo.pages.dev/#/louie" }],
   },
 ];
@@ -140,10 +140,10 @@ export default function Home() {
       </header>
 
       <main className="flex flex-col gap-32 md:gap-40 py-32 md:py-40 border-t border-rule">
-        <Section id="approach" eyebrow="Approach" title="Three coordination failures. Trillions in unrealized value.">
+        <Section id="approach" eyebrow="Approach" title="Three coordination failures shape the world we&rsquo;re stuck in.">
           <div className="max-w-3xl mb-16 md:mb-20">
             <p className="text-ink-soft text-lg md:text-xl leading-relaxed">
-              The world coordinates through payment rails that don&rsquo;t price externalities, discourse platforms that reward heat over light, and civic systems with no memory. Tens of trillions of dollars flow through these mechanisms every year — and they were built for a smaller, slower world. Replacing them is a species-critical problem with commensurate upside.
+              The world coordinates through payment rails that don&rsquo;t price externalities, discourse platforms that reward heat over light, and civic systems with no memory. The mechanisms were built for a smaller, slower world. The problems they leave behind are real and human-scale; so are the returns for solving them.
             </p>
           </div>
 
@@ -157,7 +157,7 @@ export default function Home() {
               </p>
               <div className="text-sm text-ink-soft border-l border-rule pl-4 leading-relaxed">
                 <span className="block text-xs uppercase tracking-[0.18em] text-ink-muted mb-1">Comparable market</span>
-                Payment rails &mdash; Visa &amp; Mastercard process $30T+ annually; Stripe ~$1T+.
+                Global payments industry revenue ~$2.4T/yr; Visa + Mastercard combined market cap ~$1.1T.
               </div>
               <Disclosure label="Examples in the news">
                 <ul className="text-sm text-ink-soft space-y-3 leading-relaxed pt-1">
@@ -186,7 +186,7 @@ export default function Home() {
               </p>
               <div className="text-sm text-ink-soft border-l border-rule pl-4 leading-relaxed">
                 <span className="block text-xs uppercase tracking-[0.18em] text-ink-muted mb-1">Comparable market</span>
-                Prediction markets ($10B+ and growing); expert networks &amp; financial data ($30B+); civic &amp; govtech ($50B+).
+                Prediction-market platforms ~$3B combined valuation (Polymarket, Kalshi); expert networks $1.5B+ revenue; financial data terminals $30B+ revenue; US municipal IT spend $50B+/yr.
               </div>
               <Disclosure label="Examples in the news">
                 <ul className="text-sm text-ink-soft space-y-3 leading-relaxed pt-1">
@@ -215,7 +215,7 @@ export default function Home() {
               </p>
               <div className="text-sm text-ink-soft border-l border-rule pl-4 leading-relaxed">
                 <span className="block text-xs uppercase tracking-[0.18em] text-ink-muted mb-1">Comparable market</span>
-                Antitrust and competition policy moves trillions annually; AI compute and platform governance are the next fronts.
+                Hard to size cleanly: the firms targeted by antitrust and platform-governance fights have $10T+ in combined market cap; AI compute and capability concentration is the next front.
               </div>
               <Disclosure label="Examples in the news">
                 <ul className="text-sm text-ink-soft space-y-3 leading-relaxed pt-1">
@@ -228,8 +228,8 @@ export default function Home() {
                     Frontier model training has consolidated to four labs and three cloud providers. Governance proposals lag the consolidation.
                   </li>
                   <li>
-                    <span className="font-medium text-ink">DAO governance attacks.</span>{" "}
-                    Token-weighted voting in protocols like Compound has repeatedly let small whales pass proposals against community will.
+                    <span className="font-medium text-ink">Revolving-door regulation.</span>{" "}
+                    Treasury and Fed officials moving to Wall Street, FAA personnel to Boeing, FTC to big tech: industries write the rules they operate under, then hire the people who wrote them. Power buys money buys power.
                   </li>
                 </ul>
               </Disclosure>
@@ -238,7 +238,7 @@ export default function Home() {
 
           <div className="mt-20 md:mt-28 max-w-3xl">
             <p className="font-display text-2xl md:text-3xl text-ink leading-snug text-balance">
-              We&rsquo;re building foundational assets — values-embedded vector money, collective-intelligence platforms, deliberative memory — for a species-critical coordination problem. The leverage is enormous. So is the upside if any one of them lands.
+              We&rsquo;re building foundational assets — values-embedded vector money, collective-intelligence platforms, deliberative memory — for problems facing humanity at scale. The stakes are real. So are the returns for solving them.
             </p>
             <p className="mt-8 text-ink-soft leading-relaxed">
               We draw on mechanisms such as{" "}
